@@ -97,7 +97,7 @@
 }
 
 .hero-header {
-    background: url(../img/NAV_4945_resized.jpg) center center no-repeat;
+    background: url(../img/front-page.jpg) center center no-repeat;
     background-size: cover;  /* Image covers entire section */
     height: 100vh;            /* Full viewport height */
 }

@@ -217,8 +217,9 @@
         position: fixed;
         bottom: 20px;
         right: 20px;
-        display: flex;
+        display: inline-flex;
         align-items: center;
+        justify-content: center;
         background-color: #25D366;
         color: white;
         text-decoration: none;
@@ -229,6 +230,9 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         z-index: 9999;
         transition: transform 0.2s;
+        white-space: nowrap;      /* prevent text wrapping */
+        width: auto;              /* keep it compact */
+        max-width: 200px;         /* limit max width */
     }
 
     .whatsapp-float:hover {
@@ -239,24 +243,26 @@
         width: 30px;
         height: 30px;
         margin-right: 8px;
+        flex-shrink: 0;
     }
 
     .whatsapp-text {
         color: white;
         font-size: 16px;
-        margin-right: 5px;
     }
 
     @media (max-width: 768px) {
         .whatsapp-text {
-            display: none; /* Hide text on small screens, show only icon */
+            display: none;
         }
         .whatsapp-float {
             padding: 10px;
             border-radius: 50%;
+            max-width: 50px;
         }
     }
 </style>
+
 
 <!-- Footer Bottom -->
 <div class="container-fluid bg-dark text-light border-top border-secondary py-4">

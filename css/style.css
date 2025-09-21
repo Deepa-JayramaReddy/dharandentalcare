@@ -97,10 +97,30 @@
 }
 
 .hero-header {
-    background: url(../img/front-page-1.jpg) center center no-repeat;
-    background-size: cover;  /* Image covers entire section */
-    height: 100vh;            /* Full viewport height */
+    background: url('../img/front-page-1.jpg') center center / cover no-repeat;
+    width: 100%;
+    min-height: 200px;      /* Minimum height for small screens */
+    height: 100vh;          /* Full screen for desktop */
+    display: flex;
+    align-items: center;    /* Center any text inside vertically */
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+  padding-left: 50px;     /* Horizontal padding */
+    padding-right: 50px;    /* Horizontal padding */
+	
 }
+
+/* On mobile, don't force full screen height */
+@media (max-width: 768px) {
+    .hero-header {
+        height: auto;       /* Auto height for mobile */
+        padding: 50px 0;    /* Add some padding for spacing */
+        background-position: top center; /* Keeps top visible */
+    }
+}
+
+
 
 .service-item {
     position: relative;
